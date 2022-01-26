@@ -1,6 +1,6 @@
 # first_app
 
-A new Flutter project.
+A flutter project to follow the [first tutorial](https://codelabs.developers.google.com/codelabs/first-flutter-app-pt1#2)
 
 ## What we can observe at first :
 - This example creates a [Material](https://material.io/design/) app. Material is a visual-design language that's standard on mobile and the web. Flutter offers a rich set of Material widgets.
