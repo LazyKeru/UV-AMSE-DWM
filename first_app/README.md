@@ -2,15 +2,32 @@
 
 A new Flutter project.
 
-## Getting Started
+## What we can observe at first :
+- This example creates a [Material](https://material.io/design/) app. Material is a visual-design language that's standard on mobile and the web. Flutter offers a rich set of Material widgets.
+- The app extends `StatelessWidget`, which makes the app itself a widget. In Flutter, almost everything is a widget, including alignment, padding, and layout.
+- The `Scaffold` widget, from the Material library, provides a default app bar, a title, and a body property that holds the widget tree for the home screen. The widget subtree can be quite complex.
+- A widget's main job is to provide a `build` method that describes how to display the widget in terms of other, lower-level widgets.
+- The body for this example consists of a `Center` widget containing a `Text` child widget. The `Center` widget aligns its widget subtree to the center of the screen.
 
-This project is a starting point for a Flutter application.
+## Adding our first package (list of packages at pub.dev):
 
-A few resources to get you started if this is your first Flutter project:
+- Add the english_words package as a dependency of this app: `$ flutter pub add english_words`
+- In `lib/main.dart`, import the new package: `import 'package:english_words/english_words.dart';  // Add this line.`
+- We can now use english_words in our hello world
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Create boilerplate code for a stateful widget:
+- type `stful` and press `enter` :
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+class RandomWords extends StatefulWidget {
+  @override
+  _RandomWordsState createState() => _RandomWordsState();
+}
+
+class _RandomWordsState extends State<RandomWords> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+```
