@@ -2,6 +2,14 @@
 
 UV AMSE Dev Web Mobile course - [LINK](https://ceri-num.gitbook.io/uv-amse/introduction)
 
+Dans ce cours, nous allons découvrir comment développer des applications mobiles à l'aide du framework Flutter basé sur les technologies Web et le langage Dart.
+
+![Flutter](./doc/root/flutter.png)
+
+# list of built flutter app:
+- [first app](./first_app/README.md) following this 2 tutorial :  [tutorial1](https://codelabs.developers.google.com/codelabs/first-flutter-app-pt1#3); [tutorial1](https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2/#0)
+- second app (coming soon)
+
 ## Run app on chrome
 
 We will use `flutter run -d chrome` at the root of the flutter project
