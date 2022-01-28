@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.0.0...v1.1.0) (2022-01-28)
+
+
+### Features
+
+* finished the tutorials ([8b434bf](https://github.com/LazyKeru/UV-AMSE-DWM/commit/8b434bfa824bbc10104fbf04b17bcd6754094062))
+
 # 1.0.0 (2022-01-28)
 
 
