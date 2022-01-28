@@ -18,6 +18,10 @@ We will use `flutter run -d chrome` at the root of the flutter project
 
 Run the following command to generate a release build: `flutter build web`
 
+## Workflow :
+
+- [![semantic-versionning](https://img.shields.io/github/workflow/status/LazyKeru/UV-AMSE-DWM/Semantic-versionning?style=plastic&label=Versionning)](https://github.com/LazyKeru/UV-AMSE-DWM/actions/workflows/semantic_versioning.yml)
+
 ## Commit convention :
 - BREAKING CHANGE: 
 - build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
