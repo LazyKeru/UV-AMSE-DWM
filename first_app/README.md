@@ -31,3 +31,21 @@ class _RandomWordsState extends State<RandomWords> {
   }
 }
 ```
+
+## We learned a lot of things:
+- Making a list
+- Favorite button
+- Adding a Navigator
+- etc...
+
+*For more detail do the tutorial <3*
+
+## Next step:
+
+- [Layouts in Flutter](https://flutter.dev/docs/development/ui/layout)
+- [Add interactivity to your Flutter app](https://flutter.dev/docs/development/ui/interactive)
+- [Introduction to widgets](https://flutter.dev/docs/development/ui/widgets-intro)
+- [Flutter for Android developers](https://flutter.dev/docs/get-started/flutter-for/android-devs)
+- [Flutter for React Native developers](https://flutter.dev/docs/get-started/flutter-for/react-native-devs)
+- [Flutter for web developers](https://flutter.dev/docs/get-started/flutter-for/web-devs)
+- [Flutter's YouTube channel](https://www.youtube.com/flutterdev)
