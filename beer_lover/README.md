@@ -4,9 +4,9 @@ This web mobile app is inspired by my first_app. It will be for my TP1. It is su
 
 ## app Structure:
 - Home page
-- - Beers
-- - Beers that you've tasted
-- - Beers that you've loved
+    - Beers
+    - Beers that you've tasted
+    - Beers that you've loved
 
 ## project structure
 - `./assets/` : Static assets for the app
