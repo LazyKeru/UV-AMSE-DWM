@@ -17,6 +17,11 @@ This web mobile app is inspired by my first_app. It will be for my TP1. It is su
 - `./lib/widgets/` : Widgets and Layouts used in the app
 - `./lib/models/` : Collection of data
 
+## [database](https://public.opendatasoft.com/explore/dataset/open-beer-database)
+
+- id of the database : `open-beer-database`
+- licence : [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/1-0/)
+
 ## Commit convention :
 - BREAKING CHANGE: 
 - build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
