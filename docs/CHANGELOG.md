@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.2.0...v1.3.0) (2022-01-30)
+
+
+### Features
+
+* Added a simple navigation system in the beer_lover app ([87dcb8a](https://github.com/LazyKeru/UV-AMSE-DWM/commit/87dcb8a090af1bc7fed1e47c7dfa3f34e8361c71))
+
 # [1.2.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.1.0...v1.2.0) (2022-01-30)
 
 
