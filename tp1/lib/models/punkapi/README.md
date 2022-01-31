@@ -12,7 +12,8 @@
     "ibu":59,
     "target_fg":1027,
     "target_og":1069,
-    "ebc":10,"srm":5,
+    "ebc":10,
+    "srm":5,
     "ph":4.4,
     "attenuation_level":67,
     "volume": { 

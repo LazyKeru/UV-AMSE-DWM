@@ -30,7 +30,9 @@ Widget buildRow(BuildContext context, Beer beer) {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => BeersDetailWidget(),
+          builder: (context) => BeersDetailWidget(
+            beer: beer
+          ),
         ),
       );
     }
