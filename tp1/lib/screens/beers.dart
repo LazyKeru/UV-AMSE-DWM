@@ -3,6 +3,7 @@ import '../providers/fetchPunkapi.dart';
 import '../widgets/buildList.dart';
 import '../models/punkapi/beers.dart';
 
+
 class BeersWidget extends StatefulWidget {
   const BeersWidget({Key? key}) : super(key: key);
   
@@ -31,7 +32,7 @@ class _BeersWidgetState extends State<BeersWidget> {
         future: futureBeers,
         builder: (context, snapshot) {
           if(snapshot.hasData){
-            return buildListView(snapshot.data!);
+            return buildListView(context, snapshot.data!);
           }else if(snapshot.hasError){
             return Text('Error: ${snapshot.error}');
           }
