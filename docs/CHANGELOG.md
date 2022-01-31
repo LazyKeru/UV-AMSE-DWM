@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.5.0...v1.6.0) (2022-01-31)
+
+
+### Features
+
+* added sub page for beer items in tp1 ([01c9ca4](https://github.com/LazyKeru/UV-AMSE-DWM/commit/01c9ca4d32ad470770ff01fb0bb98b348d28efb4))
+
 # [1.5.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.4.0...v1.5.0) (2022-01-31)
 
 
