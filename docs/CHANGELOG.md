@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.3.0...v1.4.0) (2022-01-31)
+
+
+### Bug Fixes
+
+* fixed the beer model and loading in beer_lover flutter application ([65b631a](https://github.com/LazyKeru/UV-AMSE-DWM/commit/65b631a54c01ce321d05e10c99901879bcdde058))
+
+
+### Features
+
+* added open-beer-database.json from opendatasoft ([4645c5f](https://github.com/LazyKeru/UV-AMSE-DWM/commit/4645c5f79d4a558cc2c78789da692b9709c28e22))
+
 # [1.3.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.2.0...v1.3.0) (2022-01-30)
 
 
