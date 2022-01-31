@@ -7,7 +7,11 @@ import '../models/punkapi/beer.dart';
 ListTile buildRow(Beer beer) {
   //final alreadySaved = _saved.contains(beer);
   return ListTile(
-    // leading: ,
+    leading: SizedBox(
+      height: 100.0,
+      width: 100.0, // fixed width and height
+      child: Image.network(beer.imageurl)
+    ),
     title: Text(
       beer.name,
     ),
