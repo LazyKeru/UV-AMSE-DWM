@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.4.0...v1.5.0) (2022-01-31)
+
+
+### Features
+
+* added image loading to beer_lover ([0e0878f](https://github.com/LazyKeru/UV-AMSE-DWM/commit/0e0878fdc0d8ea17aa6cf3e4a0fe7710b94f11af))
+
 # [1.4.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.3.0...v1.4.0) (2022-01-31)
 
 
