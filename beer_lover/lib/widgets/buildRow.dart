@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
-import '../models/beer.dart';
+//import '../models/local_json/beer.dart';
+import '../models/punkapi/beer.dart';
+/// Build Row was adapted for the punkapi json model.
+/// This generates a list item for each beer loaded
 
 ListTile buildRow(Beer beer) {
   //final alreadySaved = _saved.contains(beer);
   return ListTile(
+    // leading: ,
     title: Text(
-      beer.fields.name,
+      beer.name,
     ),
-    trailing: Icon(     // NEW from here...
-      // alreadySaved ? Icons.favorite : Icons.favorite_border,
-      Icons.favorite_border,
-      // color: alreadySaved ? Colors.red : null,
-      color: Colors.red,
-      // semanticLabel: alreadySaved ? 'Remove from saved' : 'Save',
+    subtitle: Text("Style : " + beer.description),
+    trailing: Row(
+      mainAxisSize: MainAxisSize.min,  
+      children: <Widget>[
+        Icon(Icons.favorite_border),
+        Icon(Icons.local_bar_outlined)
+      ],
     ),
     onTap: (){ //Click action
       // Will like the icon

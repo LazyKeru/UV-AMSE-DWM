@@ -1,4 +1,4 @@
-# lib_regex
+# Beer Lover
 
 This web mobile app is inspired by my first_app. It will be for my TP1. It is supposed to be a media management app, nevertheless. I love beer and would prefer a beer management app.
 
@@ -21,6 +21,11 @@ This web mobile app is inspired by my first_app. It will be for my TP1. It is su
 
 - id of the database : `open-beer-database`
 - licence : [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/1-0/)
+
+## [database](https://punkapi.com/)
+
+- to be used
+- limit : 3600 requests per hour
 
 ## Commit convention :
 - BREAKING CHANGE: 

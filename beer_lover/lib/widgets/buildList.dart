@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../models/beers.dart';
+//import '../models/local_json/beers.dart';
+import '../models/punkapi/beers.dart';
 import './buildRow.dart';
 
 

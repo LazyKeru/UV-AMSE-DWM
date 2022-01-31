@@ -15,7 +15,8 @@ class _TestedWidgetState extends State<TestedWidget> {
   Widget build(BuildContext context) {
     return Scaffold (                     // Add from here... 
       appBar: AppBar(
-        title: const Text(_title)
+        title: const Text(_title),
+        backgroundColor: Colors.green,
       ),
       body: const Center(
           child: Text('To add more'),

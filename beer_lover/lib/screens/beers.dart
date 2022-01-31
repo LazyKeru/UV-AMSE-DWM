@@ -1,18 +1,7 @@
 import 'package:flutter/material.dart';
-import 'dart:convert';
+import '../providers/fetchPunkapi.dart';
 import '../widgets/buildList.dart';
-import '../models/beers.dart';
-import 'package:flutter/services.dart' show rootBundle;
-
-Future<Beers> fetchBeers() async {
-    String data = await rootBundle
-      .loadString('database/open-beer-database.json');
-    if (data.isEmpty) {
-      throw Exception('Failed to load the Beer Json');
-    }else{
-      return Beers.fromJson(jsonDecode(data));
-    }
-  }
+import '../models/punkapi/beers.dart';
 
 class BeersWidget extends StatefulWidget {
   const BeersWidget({Key? key}) : super(key: key);
@@ -35,7 +24,8 @@ class _BeersWidgetState extends State<BeersWidget> {
   Widget build(BuildContext context) {
     return Scaffold (                     // Add from here... 
       appBar: AppBar(
-        title: const Text(_title)
+        title: const Text(_title),
+        backgroundColor: Colors.yellow,
       ),
       body: FutureBuilder<Beers>(
         future: futureBeers,

@@ -15,7 +15,8 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
   Widget build(BuildContext context) {
     return Scaffold (                     // Add from here... 
       appBar: AppBar(
-        title: const Text(_title)
+        title: const Text(_title),
+        backgroundColor: Colors.red,
       ),
       body: const Center(
           child: Text('To add more'),
