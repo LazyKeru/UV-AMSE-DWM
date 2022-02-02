@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.6.0...v1.7.0) (2022-01-31)
+
+
+### Features
+
+* new design to the beerDetail screen ([2b90b87](https://github.com/LazyKeru/UV-AMSE-DWM/commit/2b90b87af98cfa053617ce0f2f8642d0e2dc5acc))
+
 # [1.6.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.5.0...v1.6.0) (2022-01-31)
 
 
