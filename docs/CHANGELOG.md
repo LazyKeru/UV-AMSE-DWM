@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.7.0...v1.8.0) (2022-02-02)
+
+
+### Features
+
+* tested and favored button works ([ede9369](https://github.com/LazyKeru/UV-AMSE-DWM/commit/ede9369fc5b4a70d0859dd218edbd0d86856ce3b))
+
 # [1.7.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.6.0...v1.7.0) (2022-01-31)
 
 
