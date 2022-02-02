@@ -14,7 +14,7 @@ class BeersWidget extends StatefulWidget {
 class _BeersWidgetState extends State<BeersWidget> {
   static const String _title = 'Beers';
   late Future<Beers> futureBeers;
-
+  final favorite = <int>[];
   @override
   void initState() {
     super.initState();
@@ -32,7 +32,10 @@ class _BeersWidgetState extends State<BeersWidget> {
         future: futureBeers,
         builder: (context, snapshot) {
           if(snapshot.hasData){
-            return buildListView(context, snapshot.data!);
+            return BeerListView(
+              beers: snapshot.data!, 
+              favorite: favorite
+            );
           }else if(snapshot.hasError){
             return Text('Error: ${snapshot.error}');
           }
