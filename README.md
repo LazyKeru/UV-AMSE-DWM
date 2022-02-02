@@ -9,7 +9,7 @@ Dans ce cours, nous allons découvrir comment développer des applications mobil
 # list of built flutter app:
 - [first app](./first_app/README.md) following this 2 tutorial :  [tutorial1](https://codelabs.developers.google.com/codelabs/first-flutter-app-pt1#3); [tutorial1](https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2/#0)
 - second app (coming soon)
-
+- [tp1 app](./tp1/README.md) - building a beer catalogue
 ## Run app on chrome
 
 We will use `flutter run -d chrome` at the root of the flutter project
@@ -21,6 +21,7 @@ Run the following command to generate a release build: `flutter build web`
 ## Workflow :
 
 - [![semantic-versionning](https://img.shields.io/github/workflow/status/LazyKeru/UV-AMSE-DWM/Semantic-versionning?style=plastic&label=Versionning)](https://github.com/LazyKeru/UV-AMSE-DWM/actions/workflows/semantic_versioning.yml)
+    - access [CHANGELOG.md](./docs/CHANGELOG.md)
 
 ## Commit convention :
 - BREAKING CHANGE: 

@@ -1,5 +1,6 @@
 import 'dart:js';
 
+import '../utilities/changeFavorite.dart';
 import 'package:flutter/material.dart';
 //import '../models/local_json/beer.dart';
 import '../models/punkapi/beer.dart';
@@ -21,8 +22,13 @@ Widget buildRow(BuildContext context, Beer beer) {
     subtitle: Text("Style : " + beer.description),
     trailing: Row(
       mainAxisSize: MainAxisSize.min,  
-      children: const <Widget>[
-        Icon(Icons.favorite_border),
+      children: <Widget>[
+        IconButton(
+          icon: Icon(Icons.favorite_border),
+          onPressed: () {
+            changeFavorite();
+          }
+        ),
         Icon(Icons.local_bar_outlined)
       ],
     ),
