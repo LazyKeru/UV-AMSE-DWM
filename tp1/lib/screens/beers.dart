@@ -17,6 +17,7 @@ class _BeersWidgetState extends State<BeersWidget> {
   static const String _title = 'Beers';
   late Future<Beers> futureBeers;
   Set<int> _favorite = <int>{};
+  Set<int> _tested = <int>{};
   @override
   void initState() {
     super.initState();
@@ -25,6 +26,8 @@ class _BeersWidgetState extends State<BeersWidget> {
 
   void addToFavorite(int id) => setState(() => _favorite = addToList(_favorite, id));
   void removeFromFavorite(int id) => setState(() => _favorite = removeFromList(_favorite, id));
+  void addToTested(int id) => setState(() => _tested = addToList(_tested, id));
+  void removeFromTested(int id) => setState(() => _tested = removeFromList(_tested, id));
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +45,9 @@ class _BeersWidgetState extends State<BeersWidget> {
               favorite: _favorite,
               addToFavorite: addToFavorite,
               removeFromFavorite: removeFromFavorite,
+              tested: _tested,
+              addToTested: addToTested,
+              removeFromTested: removeFromTested,
             );
           }else if(snapshot.hasError){
             return Text('Error: ${snapshot.error}');

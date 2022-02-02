@@ -12,13 +12,19 @@ class BeerRow extends StatefulWidget {
   final Set<int> favorite;
   final Function(int id) addToFavorite; // CallBack Add to favorite
   final Function(int id) removeFromFavorite; // CallBack Remove from favorite
+  final Set<int> tested;
+  final Function(int id) addToTested; // CallBack Add to favorite
+  final Function(int id) removeFromTested; // CallBack Remove from favorite
   const BeerRow(
     { 
       Key? key, 
       required this.beer, 
       required this.favorite, 
       required this.addToFavorite, 
-      required this.removeFromFavorite
+      required this.removeFromFavorite,
+      required this.tested,
+      required this.addToTested,
+      required this.removeFromTested
     }
   ) : super(key: key);
 
@@ -29,7 +35,8 @@ class BeerRow extends StatefulWidget {
 class _BeerRowState extends State<BeerRow> {
   @override
   Widget build(BuildContext context) {
-    var alreadyTested = widget.favorite.contains(widget.beer.id);
+    var alreadyFavored = widget.favorite.contains(widget.beer.id);
+    var alreadyTested = widget.tested.contains(widget.beer.id);
     return ListTile(
       leading: SizedBox(
         height: 100.0,
@@ -45,14 +52,13 @@ class _BeerRowState extends State<BeerRow> {
         children: <Widget>[
           IconButton(
             icon: Icon(
-              alreadyTested ? Icons.favorite : Icons.favorite_border
+              alreadyFavored ? Icons.favorite : Icons.favorite_border
             ),
             onPressed: () {
-              alreadyTested ? widget.addToFavorite(widget.beer.id) : widget.removeFromFavorite(widget.beer.id); 
+              alreadyFavored ? debugPrint("Remove from favorite") : debugPrint("Add to favorite");
               var temp = widget.beer.id;
               debugPrint("Beer id: $temp");
-              var otemp = widget.favorite;
-              debugPrint("Favorite: $otemp");
+              alreadyFavored ? widget.removeFromFavorite(widget.beer.id) : widget.addToFavorite(widget.beer.id); 
             }
           ),
           IconButton(
@@ -60,7 +66,10 @@ class _BeerRowState extends State<BeerRow> {
               alreadyTested ? Icons.local_bar : Icons.local_bar_outlined
             ),
             onPressed: () {
-              alreadyTested ? widget.favorite.add(widget.beer.id) : widget.favorite.remove(widget.beer.id);
+              alreadyTested ? debugPrint("Remove from tested") : debugPrint("Add to tested");
+              var temp = widget.beer.id;
+              debugPrint("Beer id: $temp");
+              alreadyTested ? widget.removeFromTested(widget.beer.id) : widget.addToTested(widget.beer.id); 
             }
           )
         ],
