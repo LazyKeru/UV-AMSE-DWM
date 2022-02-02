@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../providers/fetchPunkapi.dart';
 import '../widgets/buildList.dart';
 import '../models/punkapi/beers.dart';
+import '../utilities/addToList.dart';
+import '../utilities/removeFromList.dart';
 
 
 class BeersWidget extends StatefulWidget {
@@ -14,12 +16,15 @@ class BeersWidget extends StatefulWidget {
 class _BeersWidgetState extends State<BeersWidget> {
   static const String _title = 'Beers';
   late Future<Beers> futureBeers;
-  final favorite = <int>[];
+  Set<int> _favorite = <int>{};
   @override
   void initState() {
     super.initState();
     futureBeers= fetchBeers();
   }
+
+  void addToFavorite(int id) => setState(() => _favorite = addToList(_favorite, id));
+  void removeFromFavorite(int id) => setState(() => _favorite = removeFromList(_favorite, id));
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +39,9 @@ class _BeersWidgetState extends State<BeersWidget> {
           if(snapshot.hasData){
             return BeerListView(
               beers: snapshot.data!, 
-              favorite: favorite
+              favorite: _favorite,
+              addToFavorite: addToFavorite,
+              removeFromFavorite: removeFromFavorite,
             );
           }else if(snapshot.hasError){
             return Text('Error: ${snapshot.error}');

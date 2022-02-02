@@ -9,9 +9,9 @@ import '../screens/beerDetail.dart';
 
 class BeerRow extends StatefulWidget {
   final Beer beer;
-  final List<int> favorite;
-  final Function() addToFavorite; // CallBack Add to favorite
-  final Function() removeFromFavorite; // CallBack Remove from favorite
+  final Set<int> favorite;
+  final Function(int id) addToFavorite; // CallBack Add to favorite
+  final Function(int id) removeFromFavorite; // CallBack Remove from favorite
   const BeerRow(
     { 
       Key? key, 
@@ -48,15 +48,11 @@ class _BeerRowState extends State<BeerRow> {
               alreadyTested ? Icons.favorite : Icons.favorite_border
             ),
             onPressed: () {
-              setState(
-                () { 
-                  alreadyTested ? widget.favorite.add(widget.beer.id) : widget.favorite.remove(widget.beer.id); 
-                  var temp = widget.beer.id;
-                  debugPrint("Beer id: $temp");
-                  var otemp = widget.favorite;
-                  debugPrint("Favorite: $otemp");
-                }
-              );
+              alreadyTested ? widget.addToFavorite(widget.beer.id) : widget.removeFromFavorite(widget.beer.id); 
+              var temp = widget.beer.id;
+              debugPrint("Beer id: $temp");
+              var otemp = widget.favorite;
+              debugPrint("Favorite: $otemp");
             }
           ),
           IconButton(
