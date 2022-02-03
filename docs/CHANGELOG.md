@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.8.0...v1.9.0) (2022-02-03)
+
+
+### Features
+
+* beers can now be liked and favored on beerDetail screen ([0c9407d](https://github.com/LazyKeru/UV-AMSE-DWM/commit/0c9407d5c59c364a22024ded880ac8939f7c80dc))
+
 # [1.8.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.7.0...v1.8.0) (2022-02-02)
 
 
