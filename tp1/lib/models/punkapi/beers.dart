@@ -16,8 +16,4 @@ class Beers{
       throw Exception("Error on the json format");
     }
   }
-  // Not used not sure if I'll have the time to use it
-  void mergeBeers(Beers newBeers){
-    beers.add(newBeers.beers<Beer>);
-  }
 }

@@ -3,6 +3,7 @@ import '../screens/beers.dart';
 import '../screens/favorite.dart';
 import '../screens/home.dart';
 import '../screens/tested.dart';
+import '../screens/about.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);
@@ -20,7 +21,8 @@ class _NavBar extends State<NavBar> {
     HomeWidget(), // Index 0
     BeersWidget(), // Index 1
     TestedWidget(), // Index 2
-    FavoriteWidget() // Index 3
+    FavoriteWidget(), // Index 3
+    AboutWidget(), // Index 4
   ];
 
   void _onItemTapped(int index) {
@@ -48,7 +50,7 @@ class _NavBar extends State<NavBar> {
             backgroundColor: Colors.yellow,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.check_circle),
+            icon: Icon(Icons.local_bar),
             label: 'Tested',
             backgroundColor: Colors.green,
           ),
@@ -56,6 +58,11 @@ class _NavBar extends State<NavBar> {
             icon: Icon(Icons.favorite),
             label: 'Favorite',
             backgroundColor: Colors.red,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.help_center),
+            label: 'Favorite',
+            backgroundColor: Colors.black,
           ),
         ],
         currentIndex: _selectedIndex,
