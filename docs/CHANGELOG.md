@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.9.0...v1.10.0) (2022-02-03)
+
+
+### Features
+
+* we now have liked and favored beers that load properly. Will need to stop and reload the data each time ([97269da](https://github.com/LazyKeru/UV-AMSE-DWM/commit/97269da4d62e38212b222186d5e0a50946e9fee2))
+
 # [1.9.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.8.0...v1.9.0) (2022-02-03)
 
 
