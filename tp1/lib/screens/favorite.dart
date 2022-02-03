@@ -48,7 +48,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
       body: FutureBuilder<Beers>(
         future: futureFavoriteBeers,
         builder: (context, snapshot) {
-          if (global.favorite.isEmpty) {
+          if (global.favorite.isEmpty == true) {
             return const Text('No favorite');
           }
           if (snapshot.connectionState != ConnectionState.done) {

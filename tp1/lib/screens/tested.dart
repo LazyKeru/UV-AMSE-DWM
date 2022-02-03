@@ -30,10 +30,10 @@ class _TestedWidgetState extends State<TestedWidget> {
 
 
   // Not the cleanest wait, but it works
-  void addToFavorite(int id) => setState(() => {global.favorite = addToList(global.favorite, id), futureTestedBeers = _getBeers()});
-  void removeFromFavorite(int id) => setState(() => {global.favorite = removeFromList(global.favorite, id), futureTestedBeers = _getBeers()});
-  void addToTested(int id) => setState(() => global.tested = addToList(global.tested, id));
-  void removeFromTested(int id) => setState(() => global.tested = removeFromList(global.tested, id));
+  void addToFavorite(int id) => setState(() => global.favorite = addToList(global.favorite, id));
+  void removeFromFavorite(int id) => setState(() => global.favorite = removeFromList(global.favorite, id));
+  void addToTested(int id) => setState(() => {global.tested = addToList(global.tested, id), futureTestedBeers = _getBeers()});
+  void removeFromTested(int id) => setState(() => {global.tested = removeFromList(global.tested, id), futureTestedBeers = _getBeers()});
 
   static const String _title = 'Tested';
 
@@ -47,7 +47,7 @@ class _TestedWidgetState extends State<TestedWidget> {
       body: FutureBuilder<Beers>(
         future: futureTestedBeers,
         builder: (context, snapshot) {
-          if (global.tested.isEmpty) {
+          if (global.tested.isEmpty  == true) {
             return const Text('No tested');
           }
           if (snapshot.connectionState != ConnectionState.done) {

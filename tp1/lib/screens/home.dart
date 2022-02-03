@@ -24,14 +24,17 @@ class _HomeWidgetState extends State<HomeWidget> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           // Logo
-          Image.asset(
-            'img/home.png',
-            //width: 600,
-            height: 400,
-            //fit: BoxFit.cover,
+          Center(
+            child: 
+            Image.asset(
+              'img/home.png',
+              height: 400,
+            ),
           ),
           // title
-          titleSection,
+          Center(
+            child: titleSection,
+          )
         ]
       ),
     );                                      // ... to here.
