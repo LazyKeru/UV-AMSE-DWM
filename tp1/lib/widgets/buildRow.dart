@@ -78,8 +78,14 @@ class _BeerRowState extends State<BeerRow> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => BeersDetailWidget(
-              beer: widget.beer
+            builder: (context) => BeerDetail(
+              beer: widget.beer,
+              favorite: widget.favorite,
+              addToFavorite: widget.addToFavorite,
+              removeFromFavorite: widget.removeFromFavorite,
+              tested: widget.tested,
+              addToTested: widget.addToTested,
+              removeFromTested: widget.removeFromTested,
             ),
           ),
         );
