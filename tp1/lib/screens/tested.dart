@@ -47,6 +47,9 @@ class _TestedWidgetState extends State<TestedWidget> {
       body: FutureBuilder<Beers>(
         future: futureTestedBeers,
         builder: (context, snapshot) {
+          if (global.tested.isEmpty) {
+            return const Text('No tested');
+          }
           if (snapshot.connectionState != ConnectionState.done) {
             return const CircularProgressIndicator();
           }

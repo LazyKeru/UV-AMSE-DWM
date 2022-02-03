@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import '../providers/fetchPunkapi.dart';
 import '../widgets/buildList.dart';
@@ -50,6 +48,9 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
       body: FutureBuilder<Beers>(
         future: futureFavoriteBeers,
         builder: (context, snapshot) {
+          if (global.favorite.isEmpty) {
+            return const Text('No favorite');
+          }
           if (snapshot.connectionState != ConnectionState.done) {
             return const CircularProgressIndicator();
           }
