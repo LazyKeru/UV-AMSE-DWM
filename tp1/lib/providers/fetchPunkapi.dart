@@ -1,12 +1,13 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import '../models/punkapi/beers.dart';
+import '../models/punkapi/beer.dart';
 
 const String punkapi = "https://api.punkapi.com/v2/";
 
-Future<Beers> fetchBeers() async {
+Future<Beers> fetchBeers(String request) async {
   final response = await http
-    .get(Uri.parse(punkapi+"beers?page=2&per_page=80"));
+    .get(Uri.parse(punkapi+request));
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response,
     // then parse the JSON.

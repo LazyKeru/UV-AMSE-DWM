@@ -4,6 +4,7 @@ import '../widgets/buildList.dart';
 import '../models/punkapi/beers.dart';
 import '../utilities/addToList.dart';
 import '../utilities/removeFromList.dart';
+import '../providers/globalVar.dart' as global;
 
 
 class BeersWidget extends StatefulWidget {
@@ -16,18 +17,18 @@ class BeersWidget extends StatefulWidget {
 class _BeersWidgetState extends State<BeersWidget> {
   static const String _title = 'Beers';
   late Future<Beers> futureBeers;
-  Set<int> _favorite = <int>{};
-  Set<int> _tested = <int>{};
+  // Set<int> _favorite = <int>{}; // replaced by global.favorite
+  // Set<int> _tested = <int>{}; // replaced by global.tested
   @override
   void initState() {
     super.initState();
-    futureBeers= fetchBeers();
+    futureBeers= fetchBeers("beers?page=2&per_page=80");
   }
 
-  void addToFavorite(int id) => setState(() => _favorite = addToList(_favorite, id));
-  void removeFromFavorite(int id) => setState(() => _favorite = removeFromList(_favorite, id));
-  void addToTested(int id) => setState(() => _tested = addToList(_tested, id));
-  void removeFromTested(int id) => setState(() => _tested = removeFromList(_tested, id));
+  void addToFavorite(int id) => setState(() => global.favorite = addToList(global.favorite, id));
+  void removeFromFavorite(int id) => setState(() => global.favorite = removeFromList(global.favorite, id));
+  void addToTested(int id) => setState(() => global.tested = addToList(global.tested, id));
+  void removeFromTested(int id) => setState(() => global.tested = removeFromList(global.tested, id));
 
   @override
   Widget build(BuildContext context) {
@@ -42,10 +43,10 @@ class _BeersWidgetState extends State<BeersWidget> {
           if(snapshot.hasData){
             return BeerListView(
               beers: snapshot.data!, 
-              favorite: _favorite,
+              favorite: global.favorite,
               addToFavorite: addToFavorite,
               removeFromFavorite: removeFromFavorite,
-              tested: _tested,
+              tested: global.tested,
               addToTested: addToTested,
               removeFromTested: removeFromTested,
             );
