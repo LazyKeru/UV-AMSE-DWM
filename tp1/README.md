@@ -9,13 +9,13 @@ This web mobile app is inspired by my first_app. It will be for my TP1. It is su
     - Beers that you've loved
 
 ## project structure
-- `./assets/` : Static assets for the app
-- `./cloud_functions/` : Cloud functions used in the app.
-- `./lib/screens/` : Screens and UI of the app
-- `./lib/providers/` : Interactions outside the app
-- `./lib/utilities/` : Function or logic used in the app
-- `./lib/widgets/` : Widgets and Layouts used in the app
-- `./lib/models/` : Collection of data
+- `./assets/` : Static assets for the app - [README.md](./lib/widgets/README.md)
+- `./cloud_functions/` : Cloud functions used in the app. - NotUsed
+- `./lib/screens/` : Screens and UI of the app - [README.md](./lib/screens/README.md)
+- `./lib/providers/` : Interactions to components outside the app (ex: fetch data from api) - [README.md](./lib/utilities/README.md)
+- `./lib/utilities/` : Function or logic used in the app - [README.md](./lib/utilities/README.md)
+- `./lib/widgets/` : Widgets and Layouts used in the app - [README.md](./lib/widgets/README.md)
+- `./lib/models/` : Models for the data loaded - [README.md](./lib/models/README.md)
 
 ## [database](https://public.opendatasoft.com/explore/dataset/open-beer-database)
 
