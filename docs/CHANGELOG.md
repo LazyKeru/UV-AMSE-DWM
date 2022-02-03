@@ -1,3 +1,16 @@
+# [1.11.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.10.0...v1.11.0) (2022-02-03)
+
+
+### Bug Fixes
+
+* fixed the tested and favorite if they were empty ([ba11ea0](https://github.com/LazyKeru/UV-AMSE-DWM/commit/ba11ea08e81575216ad5cb286c7110d72dd23c93))
+* loading for data and tested, are now good ([5adcafc](https://github.com/LazyKeru/UV-AMSE-DWM/commit/5adcafc181fb55cff52fd5424fd8585d3e074d79))
+
+
+### Features
+
+* added an about me page ([6bfaf75](https://github.com/LazyKeru/UV-AMSE-DWM/commit/6bfaf75c038173ee7bb1a6533ab0aa0b8495c88d))
+
 # [1.10.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.9.0...v1.10.0) (2022-02-03)
 
 
