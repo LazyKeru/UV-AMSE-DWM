@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.12.0...v1.13.0) (2022-03-02)
+
+
+### Features
+
+* simple animation ([128c4af](https://github.com/LazyKeru/UV-AMSE-DWM/commit/128c4af4466fdbbd782efc401e5aabebabb33969))
+
 # [1.12.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.11.0...v1.12.0) (2022-02-21)
 
 
