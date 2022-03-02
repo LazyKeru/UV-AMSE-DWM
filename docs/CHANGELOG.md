@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.11.0...v1.12.0) (2022-02-21)
+
+
+### Features
+
+* started the 2tp and finished the 2nd exercice ([ce4a166](https://github.com/LazyKeru/UV-AMSE-DWM/commit/ce4a1669996e03820d8ef3fec0a7ec3ef8f6fe5e))
+
 # [1.11.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.10.0...v1.11.0) (2022-02-03)
 
 
