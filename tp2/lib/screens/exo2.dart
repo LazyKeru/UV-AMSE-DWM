@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import '../widgets/exo2/image.dart';
+import '../widgets/exo2/ImageTrsf.dart';
 import '../widgets/exo2/paramSlider.dart';
 import '../widgets/exo2/paramCheckbox.dart';
+import '../widgets/exo2/ButtonActionPlay.dart';
+import 'dart:async';
+
 
 class TransformImage extends StatefulWidget {
   const TransformImage({ Key? key }) : super(key: key);
@@ -41,6 +44,32 @@ class _TransformImageState extends State<TransformImage> {
   static const int _scaleDiv = 5;
   void _changeScaleValue(double value)=>setState(()=>_scaleValue=value);
 
+  
+  /// Auto Incrementation :
+  // This variable determines whether the timer runs or not
+  bool _isRunning = true;
+
+  void _startAnimation(){
+    Timer.periodic(
+      const Duration(milliseconds: 50),
+      (Timer _animation){
+        if(!_isRunning){
+          _animation.cancel();
+        }
+        switch (_rotateXValue < _rotateXMaxValue) {
+          case true:
+            _changeXValue(_rotateXValue + 1);
+            break;
+          default:
+            _changeXValue(0);
+        }
+      }
+    );
+  }
+  @override
+  void initState(){
+    super.initState();
+  } 
 
   @override
   Widget build(BuildContext context) {
@@ -85,6 +114,9 @@ class _TransformImageState extends State<TransformImage> {
             paramDiv: _scaleDiv,
             changeValue: _changeScaleValue
           ),
+          ButtonActionPlay(
+            startAnimation: ()=>_startAnimation(),
+          )
         ],
       ),
     );
