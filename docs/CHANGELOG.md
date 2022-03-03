@@ -1,3 +1,11 @@
+# [1.14.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.13.0...v1.14.0) (2022-03-03)
+
+
+### Features
+
+* finished the 3rd exercice ([a944c80](https://github.com/LazyKeru/UV-AMSE-DWM/commit/a944c801fe7fa7a9b7983e3595ac1648b0be1f4f))
+* the animation button now works ([06f94e4](https://github.com/LazyKeru/UV-AMSE-DWM/commit/06f94e4b3cdabd236f7b56641c6c8420ead8c8f8))
+
 # [1.13.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.12.0...v1.13.0) (2022-03-02)
 
 
