@@ -7,7 +7,7 @@ class ParamSlider extends StatefulWidget {
       required this.paramName, 
       required this.paramValue,
       required this.paramMaxValue,
-      required this.paramDiv,
+      this.paramDiv,
       required this.changeValue,
       this.paramMinValue = 0 // Default
     }

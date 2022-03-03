@@ -22,14 +22,12 @@ class _TransformImageState extends State<TransformImage> {
   static const String _rotateX = "Rotate X";
   double _rotateXValue = 0;
   static const double _rotateXMaxValue = 360;
-  static const int? _rotateXDiv = null;
   void _changeXValue(double value)=>setState(()=>_rotateXValue=value);
 
   /// Rotate Z
   static const String _rotateZ = "Rotate Z";
   double _rotateZValue = 0;
   static const double _rotateZMaxValue = 360;
-  static const int? _rotateZDiv = null;
   void _changeZValue(double value)=>setState(()=>_rotateZValue=value);
 
   /// Mirror
@@ -96,14 +94,12 @@ class _TransformImageState extends State<TransformImage> {
             paramName: _rotateX, 
             paramValue: _rotateXValue, 
             paramMaxValue: _rotateXMaxValue,
-            paramDiv: _rotateXDiv,
             changeValue: _changeXValue
           ),
           ParamSlider(
             paramName: _rotateZ, 
             paramValue: _rotateZValue, 
             paramMaxValue: _rotateZMaxValue,
-            paramDiv: _rotateZDiv,
             changeValue: _changeZValue
           ),
           ParamCheckbox(
