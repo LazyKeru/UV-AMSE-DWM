@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/exo3/MenuTile.dart';
 import './exo2.dart';
 import './exo4.dart';
+import './exo5.dart';
 
 class Menu extends StatefulWidget {
   const Menu({ Key? key }) : super(key: key);
@@ -33,8 +34,13 @@ class _MenuState extends State<Menu> {
           ),
           MenuTile(
               title: "Exercice 4",
-              subtitle: "Transformer une image",
+              subtitle: "Affichage d'une tuile",
               exercice: DisplayTileWidget(),
+          ),
+          MenuTile(
+              title: "Exercice 5",
+              subtitle: "Génération du plateau de tuiles",
+              exercice: GridGenerator(),
           )
         ],
 
