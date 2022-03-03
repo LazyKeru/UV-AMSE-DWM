@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../screens/exo2.dart';
 
-class Tile extends StatefulWidget {
-  const Tile(
+class MenuTile extends StatefulWidget {
+  const MenuTile(
     { 
       Key? key,
       required this.title,
@@ -15,10 +14,10 @@ class Tile extends StatefulWidget {
   final String subtitle;
   final Widget exercice;
   @override
-  _TileState createState() => _TileState();
+  _MenuTileState createState() => _MenuTileState();
 }
 
-class _TileState extends State<Tile> {
+class _MenuTileState extends State<MenuTile> {
   @override
   Widget build(BuildContext context) {
     return 

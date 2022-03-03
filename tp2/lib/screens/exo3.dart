@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../widgets/exo3/Tile.dart';
+import '../widgets/exo3/MenuTile.dart';
 import './exo2.dart';
+import './exo4.dart';
 
 class Menu extends StatefulWidget {
   const Menu({ Key? key }) : super(key: key);
@@ -25,15 +26,15 @@ class _MenuState extends State<Menu> {
       body:
       ListView(
         children: [
-          Tile(
+          MenuTile(
               title: "Exercice 2",
               subtitle: "Transformer une image",
-              exercice: const TransformImage(),
+              exercice: TransformImage(),
           ),
-          Tile(
+          MenuTile(
               title: "Exercice 4",
               subtitle: "Transformer une image",
-              exercice: const TransformImage(),
+              exercice: DisplayTileWidget(),
           )
         ],
 
