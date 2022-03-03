@@ -47,29 +47,33 @@ class _TransformImageState extends State<TransformImage> {
   
   /// Auto Incrementation :
   // This variable determines whether the timer runs or not
-  bool _isRunning = true;
+  bool _isRunning = false;
 
   void _startAnimation(){
+    setState(()=>_isRunning = true);
     Timer.periodic(
       const Duration(milliseconds: 50),
       (Timer _animation){
         if(!_isRunning){
           _animation.cancel();
         }
-        switch (_rotateXValue < _rotateXMaxValue) {
-          case true:
-            _changeXValue(_rotateXValue + 1);
-            break;
-          default:
-            _changeXValue(0);
-        }
+        _automaticUpdate(_rotateXValue, _rotateXMaxValue, _changeXValue);
+        _automaticUpdate(_rotateZValue, _rotateZMaxValue, _changeZValue);
       }
     );
   }
-  @override
-  void initState(){
-    super.initState();
-  } 
+
+  void _automaticUpdate(double value, double max, Function changeValue){
+    switch (value < max) {
+        case true:
+         changeValue(value + 1);
+          break;
+        default:
+          changeValue(0);
+      }
+  }
+
+  void _stopAnimation()=>setState(()=>_isRunning = false);
 
   @override
   Widget build(BuildContext context) {
@@ -116,6 +120,8 @@ class _TransformImageState extends State<TransformImage> {
           ),
           ButtonActionPlay(
             startAnimation: ()=>_startAnimation(),
+            stopAnimation: ()=>_stopAnimation(),
+            state: _isRunning,
           )
         ],
       ),
