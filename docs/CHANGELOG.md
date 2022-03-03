@@ -1,3 +1,11 @@
+# [1.15.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.14.0...v1.15.0) (2022-03-03)
+
+
+### Features
+
+* addded the exo3 ([6a30114](https://github.com/LazyKeru/UV-AMSE-DWM/commit/6a301142e41107219de48829e40415467350f126))
+* finished exercice 5 ([395207c](https://github.com/LazyKeru/UV-AMSE-DWM/commit/395207c2d9ab0f91019e7e90eba366e66941eaa5))
+
 # [1.14.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.13.0...v1.14.0) (2022-03-03)
 
 
