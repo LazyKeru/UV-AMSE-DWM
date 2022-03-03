@@ -7,7 +7,7 @@ A new Flutter project.
 - [ ] Exo 1
 - [X] Exo 2
 - [X] Exo 3
-- [ ] Exo 4
+- [X] Exo 4 // Could rework it to my sauce
 - [ ] Exo 5
 - [ ] Exo 6
 - [ ] Exo 7
