@@ -9,10 +9,11 @@ class ParamSlider extends StatefulWidget {
       required this.paramMaxValue,
       this.paramDiv,
       required this.changeValue,
+      required this.isRunning,
       this.paramMinValue = 0, // Default
     }
   ) : super(key: key);
-
+  final bool isRunning;
   final double paramMinValue;
   final String paramName;
   final double paramMaxValue;
@@ -39,7 +40,7 @@ class _ParamSliderState extends State<ParamSlider> {
           min: widget.paramMinValue,
           divisions: widget.paramDiv,
           label: widget.paramValue.round().toString(),
-          onChanged: widget.changeValue,
+          onChanged: widget.isRunning ? null : widget.changeValue,
         )
       ],
     );

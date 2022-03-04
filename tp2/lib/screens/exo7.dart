@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/exo2/paramSlider.dart';
+import '../widgets/exo7/paramSlider.dart';
 import 'package:tp2/utilities/exo7/GenerateTilesList.dart';
 import 'package:tp2/utilities/exo7/initEmptyTile.dart';
 import 'package:tp2/utilities/exo7/randomTiles.dart';
@@ -45,6 +45,7 @@ class _TaquinState extends State<Taquin> {
   static int indexEmpty = 0;
 
   switchTile(int _Size, Widget _clickedTile ){
+    if(_gameState==false){return;} //if the game is not running, do nothing
     int? _idClickTile = tiles?.indexOf(_clickedTile); // finding the index of the clickedTile
     if(_idClickTile == null){throw"error mate";}
     if(indexEmpty - 1 == _idClickTile){ //Clicked the switchTile to his left
@@ -68,11 +69,19 @@ class _TaquinState extends State<Taquin> {
     setState(()=> tiles);
   }
 
+  //Bool is the game runnning ?
+  bool _gameState = false;
+
   startGame()=>{
     setState(() {
-      tiles = randomTiles(tiles, (int index)=>setState(()=>indexEmpty = index));
+      tiles = randomTiles(tiles, indexEmpty, (int index)=>setState(()=>indexEmpty = index));
+      _gameState = true;
     })
   };
+  endGame(){
+    _changeSizeValue(_sizeValue);
+    setState(()=>_gameState=false);
+  }
 
   // The url to fetch all the image
   static String imageUrl = 'https://picsum.photos/512';
@@ -111,12 +120,13 @@ class _TaquinState extends State<Taquin> {
               paramMaxValue: _sizeMaxValue,
               paramMinValue: _sizeMinValue,
               paramDiv: _sizeDiv,
+              isRunning: _gameState,
               changeValue: _changeSizeValue
             ),
             ButtonActionPlay(
               startGame: ()=> startGame(),
-              stopGame: ()=>0,
-              state: false,
+              stopGame: ()=> endGame(),
+              state: _gameState,
             )
           ]
         )
