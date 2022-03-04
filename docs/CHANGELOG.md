@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.17.0...v1.18.0) (2022-03-04)
+
+
+### Features
+
+* exo7 is finished ([572c23a](https://github.com/LazyKeru/UV-AMSE-DWM/commit/572c23a08be4f7ab7436a3d49e9719284d3e71c6))
+
 # [1.17.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.16.0...v1.17.0) (2022-03-04)
 
 
