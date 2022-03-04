@@ -3,6 +3,8 @@ import '../widgets/exo3/MenuTile.dart';
 import './exo2.dart';
 import './exo4.dart';
 import './exo5.dart';
+import './exo6ex.dart';
+import './exo6.dart';
 
 class Menu extends StatefulWidget {
   const Menu({ Key? key }) : super(key: key);
@@ -41,6 +43,16 @@ class _MenuState extends State<Menu> {
               title: "Exercice 5",
               subtitle: "Génération du plateau de tuiles",
               exercice: GridGenerator(),
+          ),
+          MenuTile(
+              title: "Exercice 6 example",
+              subtitle: "Code of the teacher",
+              exercice: PositionedTiles(),
+          ),
+          MenuTile(
+              title: "Exercice 6",
+              subtitle: "Code of the teacher",
+              exercice: AnimatedTiles(),
           )
         ],
 
