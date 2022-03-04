@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.16.0...v1.17.0) (2022-03-04)
+
+
+### Features
+
+* started the exercice 7 ([cce795b](https://github.com/LazyKeru/UV-AMSE-DWM/commit/cce795b10fdec0823a90de1bf76653b28b42721c))
+
 # [1.16.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.15.0...v1.16.0) (2022-03-04)
 
 
