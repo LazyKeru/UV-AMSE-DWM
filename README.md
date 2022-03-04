@@ -8,7 +8,7 @@ Dans ce cours, nous allons découvrir comment développer des applications mobil
 
 # list of built flutter app:
 - [first app](./first_app/README.md) following this 2 tutorial :  [tutorial1](https://codelabs.developers.google.com/codelabs/first-flutter-app-pt1#3); [tutorial1](https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2/#0)
-- second app (coming soon)
+- [tp1 app](./tp2/README.md) - TP2
 - [tp1 app](./tp1/README.md) - building a beer catalogue
 ## Run app on chrome
 
