@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.18.0...v1.19.0) (2022-03-04)
+
+
+### Features
+
+* going to bed ([5ec9395](https://github.com/LazyKeru/UV-AMSE-DWM/commit/5ec9395bcfe5091467320e0c82bf318e1e9d3805))
+
 # [1.18.0](https://github.com/LazyKeru/UV-AMSE-DWM/compare/v1.17.0...v1.18.0) (2022-03-04)
 
 
