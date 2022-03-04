@@ -5,6 +5,7 @@ import './exo4.dart';
 import './exo5.dart';
 import './exo6ex.dart';
 import './exo6.dart';
+import './exo7.dart';
 
 class Menu extends StatefulWidget {
   const Menu({ Key? key }) : super(key: key);
@@ -53,6 +54,11 @@ class _MenuState extends State<Menu> {
               title: "Exercice 6",
               subtitle: "Code of the teacher",
               exercice: AnimatedTiles(),
+          ),
+          MenuTile(
+              title: "Exercice 7",
+              subtitle: "Taquin",
+              exercice: Taquin(),
           )
         ],
 
