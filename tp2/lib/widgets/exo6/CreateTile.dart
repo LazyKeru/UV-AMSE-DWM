@@ -24,6 +24,7 @@ class CreateTile extends StatefulWidget {
 }
 
 class _CreateTileState extends State<CreateTile> {
+  static Color color = Color.fromARGB(255, random.nextInt(255), random.nextInt(255), random.nextInt(255));
 
 
 
@@ -36,12 +37,12 @@ class _CreateTileState extends State<CreateTile> {
           Container(
             decoration: BoxDecoration(
               border: widget.canBeClicked ? Border.all(color: Colors.red) : null,
-              color: widget.color ?? Color.fromARGB(255, random.nextInt(255), random.nextInt(255), random.nextInt(255)),
+              color: widget.color ?? color,
             ),
             child:
               Center(
                 child: 
-                  Text("Tile number" + widget.number.toString())
+                  Text("Tile number " + widget.number.toString())
               )
           )
       );

@@ -47,6 +47,7 @@ class _TransformImageState extends State<TransformImage> {
   // This variable determines whether the timer runs or not
   bool _isRunning = false;
 
+  // Function to animate the screen
   void _startAnimation(){
     setState(()=>_isRunning = true);
     Timer.periodic(
@@ -61,6 +62,7 @@ class _TransformImageState extends State<TransformImage> {
     );
   }
 
+  // Reused in our startAnimation, could externalise this function too the utilities
   void _automaticUpdate(double value, double max, Function changeValue){
     switch (value < max) {
         case true:
@@ -71,6 +73,7 @@ class _TransformImageState extends State<TransformImage> {
       }
   }
 
+  // Needed so our child componenent can change the state
   void _stopAnimation()=>setState(()=>_isRunning = false);
 
   @override

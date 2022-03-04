@@ -52,7 +52,7 @@ class _MenuState extends State<Menu> {
           ),
           MenuTile(
               title: "Exercice 6",
-              subtitle: "Code of the teacher",
+              subtitle: "AnimatedTiles",
               exercice: AnimatedTiles(),
           ),
           MenuTile(

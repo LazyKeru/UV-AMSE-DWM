@@ -10,7 +10,7 @@ class GridGenerator extends StatefulWidget {
 }
 
 class _GridGeneratorState extends State<GridGenerator> {
-  static const String _title = 'Menu - Exo 5';
+  static const String _title = 'Génération du plateau de tuiles - Exo 5';
   static const Color _backgroundcolor = Color.fromRGBO(234, 189, 52, 1);
 
   static String imageUrl = 'https://picsum.photos/512';
@@ -47,7 +47,7 @@ class _GridGeneratorState extends State<GridGenerator> {
                   crossAxisSpacing: 2,
                   mainAxisSpacing: 2,
                   crossAxisCount: _sizeValue.toInt(),
-                  children: generateTilesList(_sizeValue.toInt(), imageUrl)
+                  children: generateTilesList(_sizeValue.toInt(), imageUrl) //function which creates a List<Widget>
               )
             ),
             ParamSlider(

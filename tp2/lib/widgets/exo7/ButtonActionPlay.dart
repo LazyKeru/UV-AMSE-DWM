@@ -25,7 +25,7 @@ class _ButtonActionPlayState extends State<ButtonActionPlay> {
     return Container(
       child: FloatingActionButton(
         onPressed: widget.state ? widget.stopGame : widget.startGame,
-        tooltip: "Start Automatic animation",
+        tooltip: "Start playing",
         child: Icon(widget.state ? Icons.pause : Icons.play_arrow),
       ),
 

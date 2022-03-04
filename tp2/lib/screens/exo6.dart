@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/exo2/paramSlider.dart';
+import 'package:tp2/utilities/exo7/initEmptyTile.dart';
 import 'package:tp2/utilities/exo6/GenerateTilesList.dart';
 import 'package:tp2/widgets/exo6/CreateTile.dart';
 
@@ -27,8 +28,9 @@ class _AnimatedTilesState extends State<AnimatedTiles> {
   void _changeSizeValue(double value){
     debugPrint("Loading new Tile set");
     setState(()=>_sizeValue=value);
-    setState(()=> tiles=generateTilesList(_sizeValue.toInt(), (CreateTile tile)=>switchTile(_sizeValue.toInt(), tile)));
+    setState(()=> tiles=generateTilesList(_sizeValue.toInt(), (Widget tile)=>switchTile(_sizeValue.toInt(), tile)));
     setState(()=> tiles=initEmptyTile(tiles));
+    setState(()=> indexEmpty=0);
   }
 
   //Location of the empty Tile
@@ -36,23 +38,10 @@ class _AnimatedTilesState extends State<AnimatedTiles> {
 
   // Need to have the Tiles generate just once
   //static List<Widget> tiles = generateTilesList(_sizeValue.toInt(), ()=>tiles.insert(1, tiles.removeAt(0)));
-  static List<CreateTile>? tiles;
+  static List<Widget>? tiles;
   // Action to Swap tiles
 
-  List<CreateTile>? initEmptyTile(List<CreateTile>? _tiles){
-    CreateTile empty = CreateTile(
-      number: 10,
-      doSomething:(CreateTile tile)=>0,
-      canBeClicked: false,
-      color: Colors.white,
-    );
-    _tiles?.removeAt(0);
-    _tiles!.insert(0, empty);
-    setState(()=> indexEmpty=0);
-    return _tiles;
-  }
-
-  switchTile(int _Size, CreateTile _clickedTile ){
+  switchTile(int _Size, Widget _clickedTile ){
     int? _idClickTile = tiles?.indexOf(_clickedTile); // finding the index of the clickedTile
     if(_idClickTile == null){throw"error mate";}
     if(indexEmpty - 1 == _idClickTile){ //Clicked the switchTile to his left
@@ -74,19 +63,6 @@ class _AnimatedTilesState extends State<AnimatedTiles> {
       setState(()=> indexEmpty = _idClickTile);
     }
     setState(()=> tiles);
-  }
-
-
-
-  swapTiles(int index1, int index2){
-    debugPrint("Tapped");
-    setState(() {
-        CreateTile? tile1 = tiles!.removeAt(index1); // Save the first tiles
-        CreateTile? tile2 = tiles!.removeAt(index2); // Save the second tiles
-        // Switch both of them
-        tiles?.insert(index1, tile2);
-        tiles?.insert(index2, tile1);
-    });
   }
 
   //The SetState doesn't make it reload

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//I simply copy pasted the code of the teacher
 
 class Tile {
   String imageURL;
